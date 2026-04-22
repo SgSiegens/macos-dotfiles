@@ -1,0 +1,52 @@
+#!/usr/bin/env sh
+
+# --- Scripting Addition ---
+# Note: Since you had enableScriptingAddition = true, 
+# you may need to ensure yabai has the proper sudoers permissions 
+# to load this on startup.
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
+# --- Global Settings ---
+yabai -m config external_bar                all:0:0
+yabai -m config layout                      bsp
+yabai -m config auto_balance                on
+yabai -m config mouse_modifier              alt
+yabai -m config mouse_action2               resize
+yabai -m config mouse_action1               move
+yabai -m config mouse_follows_focus         off
+yabai -m config focus_follows_mouse         autofocus
+yabai -m config top_padding                 15
+yabai -m config bottom_padding              15
+yabai -m config left_padding                15
+yabai -m config right_padding               15
+yabai -m config window_gap                  15
+
+# --- Custom Commands ---
+# Refresh Übersicht
+osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'
+
+# --- Window Rules ---
+yabai -m rule --add app=".*" sub-layer=normal
+yabai -m rule --add app="^System Settings$"    manage=off
+yabai -m rule --add app="^System Information$" manage=off
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add title="Preferences$"       manage=off
+yabai -m rule --add title="Settings$"          manage=off
+yabai -m rule --add app="Finder$"              manage=off
+yabai -m rule --add app="Music"                space=utils
+
+# --- Workspace Management ---
+yabai -m space 1 --label todo
+yabai -m space 2 --label productive
+yabai -m space 3 --label irc
+yabai -m space 10 --label utils
+
+# --- Final Overrides & External Tools ---
+# You had this double-defined in your Nix config, so the 40px offset wins:
+yabai -m config external_bar all:40:0
+
+# Start JankyBorders or similar
+~/.config/borders/bordersrc &
+
+echo "yabai configuration loaded.."
