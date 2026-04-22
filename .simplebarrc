@@ -19,7 +19,7 @@
     "yabaiPath": "/opt/homebrew/bin/yabai",
     "aerospacePath": "/opt/homebrew/bin/aerospace",
     "flashspacePath": "$(which flashspace)",
-    "windowManager": "yabai",
+    "windowManager": "aerospace",
     "shell": "sh",
     "terminal": "Terminal",
     "disableNotifications": false,
