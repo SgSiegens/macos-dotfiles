@@ -1,0 +1,13 @@
+# Open Terminal (Ctrl + Return)
+ctrl - return : open -n /Applications/kitty.app
+
+# Open Browser (Ctrl + b)
+ctrl - b : open -n /Applications/Firefox.app
+
+
+
+# Reload Configs (Super + Shift + r)
+shift + ctrl - r : \
+    brew services restart aerospace; \
+    brew services restart skhd; \
+    osascript -e 'display notification "aerospace & skhd reloaded" with title "System"'

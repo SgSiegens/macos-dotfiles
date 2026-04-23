@@ -31,8 +31,8 @@
     "flashspaceServerRefresh": false
   },
   "themes": {
-    "lightTheme": "RosePineDawn",
-    "darkTheme": "MaterialOcean",
+    "lightTheme": "GruvboxDark",
+    "darkTheme": "GruvboxDark",
     "colorMain": "",
     "colorMainAlt": "",
     "colorMinor": "",
@@ -63,7 +63,7 @@
     "displayOnlyCurrentStack": false
   },
   "spacesDisplay": {
-    "showOnDisplay": "0",
+    "showOnDisplay": "",
     "exclusions": "",
     "titleExclusions": "",
     "spacesExclusions": "",
@@ -72,7 +72,7 @@
     "hideDuplicateAppsInSpaces": false,
     "displayStickyWindowsSeparately": false,
     "hideCreateSpaceButton": true,
-    "hideEmptySpaces": false,
+    "hideEmptySpaces": true,
     "showOptionsOnHover": true,
     "switchSpacesWithoutYabai": false,
     "showOnlyFlashspaceSpaceIndex": false,
@@ -86,7 +86,7 @@
     "netstatsWidget": false,
     "cpuWidget": true,
     "gpuWidget": false,
-    "memoryWidget": false,
+    "memoryWidget": true,
     "batteryWidget": true,
     "wifiWidget": true,
     "vpnWidget": false,
@@ -94,7 +94,7 @@
     "soundWidget": true,
     "micWidget": true,
     "dateWidget": true,
-    "timeWidget": false,
+    "timeWidget": true,
     "keyboardWidget": false,
     "spotifyWidget": true,
     "cryptoWidget": false,
@@ -131,7 +131,7 @@
     "refreshFrequency": 2000,
     "showOnDisplay": "",
     "showIcon": true,
-    "displayAsGraph": true,
+    "displayAsGraph": false,
     "cpuMonitorApp": "Activity Monitor"
   },
   "gpuWidgetOptions": {

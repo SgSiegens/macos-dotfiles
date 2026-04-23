@@ -151,6 +151,8 @@ ctrl-shift-v = 'move-node-to-workspace V'
 
 ctrl-shift-f = 'fullscreen'
 
+ctrl-shift-q = 'close'
+
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 ctrl-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
