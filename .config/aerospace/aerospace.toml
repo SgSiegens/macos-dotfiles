@@ -151,7 +151,9 @@ ctrl-shift-v = 'move-node-to-workspace V'
 
 ctrl-shift-f = 'fullscreen'
 
-ctrl-shift-q = 'close'
+ctrl-shift-q = 'close --quit-if-last-window'
+
+ctrl-shift-space = 'layout floating tiling'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 ctrl-tab = 'workspace-back-and-forth'

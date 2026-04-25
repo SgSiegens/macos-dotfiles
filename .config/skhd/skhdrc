@@ -11,6 +11,8 @@ shift + ctrl -w : /bin/zsh -i -c /Users/thm/scripts/wallpapermenu.sh
 
 shift + cmd - 4 : /Applications/flameshot.app/Contents/MacOS/flameshot gui
 
+#shift + ctrl - q : osascript -e "tell application \"Finder\" to set p to item 1 of (get file of (processes whose frontmost = true)) as text" -e "tell application p to quit"
+
 
 shift + ctrl - r : \
     #aerospace --restart-service; \
