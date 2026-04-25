@@ -9,6 +9,7 @@ ctrl - b : open -n /Applications/Firefox.app
 shift + ctrl -w : /bin/zsh -i -c /Users/thm/scripts/wallpapermenu.sh
 
 
+shift + cmd - 4 : /Applications/flameshot.app/Contents/MacOS/flameshot gui
 
 
 shift + ctrl - r : \
