@@ -1,11 +1,11 @@
 {
   "$schema": "https://raw.githubusercontent.com/Jean-Tinland/simple-bar/refs/heads/master/lib/schemas/config.json",
   "global": {
-    "theme": "auto",
+    "theme": "dark",
     "compactMode": true,
     "floatingBar": true,
     "noBarBg": true,
-    "noColorInData": false,
+    "noColorInData": true,
     "bottomBar": false,
     "sideDecoration": false,
     "inlineSpacesOptions": true,
@@ -31,8 +31,8 @@
     "flashspaceServerRefresh": false
   },
   "themes": {
-    "lightTheme": "GruvboxDark",
-    "darkTheme": "GruvboxDark",
+    "lightTheme": "MacOSLight",
+    "darkTheme": "Dracula",
     "colorMain": "",
     "colorMainAlt": "",
     "colorMinor": "",
@@ -40,9 +40,9 @@
     "colorRed": "",
     "colorGreen": "",
     "colorYellow": "",
-    "colorOrange": "",
+    "colorOrange": "#4db",
     "colorBlue": "",
-    "colorMagenta": "",
+    "colorMagenta": "rgb(0, 255, 200)",
     "colorCyan": "",
     "colorBlack": "",
     "colorWhite": "",
@@ -68,7 +68,7 @@
     "titleExclusions": "",
     "spacesExclusions": "",
     "exclusionsAsRegex": false,
-    "displayAllSpacesOnAllScreens": false,
+    "displayAllSpacesOnAllScreens": true,
     "hideDuplicateAppsInSpaces": false,
     "displayStickyWindowsSeparately": false,
     "hideCreateSpaceButton": true,
@@ -92,7 +92,7 @@
     "vpnWidget": false,
     "zoomWidget": false,
     "soundWidget": true,
-    "micWidget": true,
+    "micWidget": false,
     "dateWidget": true,
     "timeWidget": true,
     "keyboardWidget": false,
@@ -301,6 +301,6 @@
     }
   },
   "customStyles": {
-    "styles": ":root {\n  --main: #0d1116;\n  --main-alt: #314154;\n  --minor: #141b22;\n  --accent: var(--yellow);\n  --red: #f16c75;\n  --green: #37f499;\n  --yellow: #37f499;\n  --orange: #19dfcf;\n  --blue: #1682ef;\n  --magenta: #987afb;\n  --cyan: #04d1f9;\n  --black: #0d1116;\n  --white: #ebfafa;\n}"
+    "styles": ":root {\n      --main: #102625;\n      --main-alt: #089868;\n      --minor: #089868;\n      --accent: #10D3A1;\n      --red: #087787;\n      --green: #10D3A1;\n      --yellow: #c3c8c8;\n      --orange: #087787;\n      --blue: #10D3A1;\n      --magenta: #0DBE76;\n      --cyan: #089868;\n      --black: #102625;\n      --white: #c3c8c8;\n      --foreground: #c3c8c8;\n      --background: #102625;\n      --transparent-dark: rgba(0, 0, 0, 0.05);\n      --font: \"JetBrains Mono\", Monaco, Menlo, monospace;\n      --font-size: 11px;\n      --bar-height: 34px;\n      --bar-radius: 6px;\n      --bar-border: 0px solid transparent;\n      --bar-inner-margin: 3px;\n      --item-max-width: 160px;\n      --item-radius: 5px;\n      --item-inner-margin: 3px 7px;\n      --item-outer-margin: 0 0 0 5px;\n      --hover-ring: 0 0 0 2px rgba(255, 255, 255, 0.75);\n      --focus-ring: 0 0 0 2px rgb(255, 255, 255);\n      --light-shadow: 0 5px 10px rgba(0, 0, 0, 0.24);\n      --foreground-shadow: 0 0 0 1px var(--foreground);\n      --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);\n      --click-effect: rgba(255, 255, 255, 0.3);\n    }"
   }
 }
