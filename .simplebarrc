@@ -7,7 +7,7 @@
     "noBarBg": true,
     "noColorInData": false,
     "bottomBar": false,
-    "sideDecoration": true,
+    "sideDecoration": false,
     "inlineSpacesOptions": true,
     "disableAnimations": false,
     "spacesBackgroundColorAsForeground": false,
