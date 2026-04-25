@@ -9,3 +9,5 @@ for socket in /tmp/kitty*; do
         /Applications/kitty.app/Contents/MacOS/kitty @ --to "unix:$socket" set-colors -a ~/.cache/wal/colors-kitty.conf
     fi
 done
+
+/Users/thm/dotfiles/.config/ubersicht/widgets/simple-bar/lib/styles/pywal/pywal-gen.sh
