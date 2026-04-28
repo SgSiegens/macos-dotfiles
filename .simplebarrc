@@ -20,7 +20,7 @@
     "aerospacePath": "/opt/homebrew/bin/aerospace",
     "windowManager": "aerospace",
     "shell": "sh",
-    "terminal": "Terminal",
+    "terminal": "/Applications/kitty.app",
     "disableNotifications": false,
     "enableMissives": false,
     "enableServer": false,
@@ -136,7 +136,7 @@
     "showIcon": true,
     "displayAsGraph": false,
     "cpuUsageThreshold": 0,
-    "cpuMonitorApp": "Activity Monitor"
+    "cpuMonitorApp": "btop"
   },
   "gpuWidgetOptions": {
     "refreshFrequency": 3000,
@@ -150,7 +150,7 @@
     "showOnDisplay": "",
     "showIcon": true,
     "memoryUsageThreshold": 0,
-    "memoryMonitorApp": "Activity Monitor"
+    "memoryMonitorApp": "btop"
   },
   "batteryWidgetOptions": {
     "refreshFrequency": 10000,
@@ -301,6 +301,6 @@
     }
   },
   "customStyles": {
-    "styles": ":root {\n      --main: #102625;\n      --main-alt: #089868;\n      --minor: #089868;\n      --accent: #10D3A1;\n      --red: #087787;\n      --green: #10D3A1;\n      --yellow: #c3c8c8;\n      --orange: #087787;\n      --blue: #10D3A1;\n      --magenta: #0DBE76;\n      --cyan: #089868;\n      --black: #102625;\n      --white: #c3c8c8;\n      --foreground: #c3c8c8;\n      --background: #102625;\n      --transparent-dark: rgba(0, 0, 0, 0.05);\n      --font: \"JetBrains Mono\", Monaco, Menlo, monospace;\n      --font-size: 11px;\n      --bar-height: 34px;\n      --bar-radius: 6px;\n      --bar-border: 0px solid transparent;\n      --bar-inner-margin: 3px;\n      --item-max-width: 160px;\n      --item-radius: 5px;\n      --item-inner-margin: 3px 7px;\n      --item-outer-margin: 0 0 0 5px;\n      --hover-ring: 0 0 0 2px rgba(255, 255, 255, 0.75);\n      --focus-ring: 0 0 0 2px rgb(255, 255, 255);\n      --light-shadow: 0 5px 10px rgba(0, 0, 0, 0.24);\n      --foreground-shadow: 0 0 0 1px var(--foreground);\n      --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);\n      --click-effect: rgba(255, 255, 255, 0.3);\n    }"
+    "styles": ":root {\n      --main: #04040b;\n      --main-alt: #3820A8;\n      --minor: #3820A8;\n      --accent: #7546D0;\n      --red: #5932CA;\n      --green: #7546D0;\n      --yellow: #c0c0c2;\n      --orange: #5932CA;\n      --blue: #7546D0;\n      --magenta: #4729B6;\n      --cyan: #3820A8;\n      --black: #04040b;\n      --white: #c0c0c2;\n      --foreground: #c0c0c2;\n      --background: #04040b;\n      --transparent-dark: rgba(0, 0, 0, 0.05);\n      --font: \"JetBrains Mono\", Monaco, Menlo, monospace;\n      --font-size: 11.5px;\n      --bar-height: 34px;\n      --bar-radius: 6px;\n      --bar-border: 0px solid transparent;\n      --bar-inner-margin: 3px;\n      --item-max-width: 160px;\n      --item-radius: 5px;\n      --item-inner-margin: 3px 7px;\n      --item-outer-margin: 0 0 0 5px;\n      --hover-ring: 0 0 0 2px rgba(255, 255, 255, 0.75);\n      --focus-ring: 0 0 0 2px rgb(255, 255, 255);\n      --light-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);\n      --foreground-shadow: 0 0 0 1px var(--foreground);\n      --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);\n      --click-effect: rgba(255, 255, 255, 0.3);\n    }"
   }
 }
