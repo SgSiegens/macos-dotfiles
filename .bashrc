@@ -14,3 +14,5 @@ export NVM_DIR="$HOME/.nvm"
 
 alias ls='ls -GFh'
 alias ll='ls -alGFh'
+
+PS1='\u@\h:\w$ '
