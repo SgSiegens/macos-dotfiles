@@ -1,12 +1,14 @@
 #!/bin/bash
 
+act="{color9.alpha_hex}{color9.strip}"
+inact="{background.alpha_hex}{background.strip}"
+
 options=(
-	style=round
-	width=6.0
-	hidpi=off
-	active_color={foreground.alpha_hex}
-	inactive_color={background.alpha_hex}
+    style=round
+    width=6.0
+    hidpi=off
+    active_color="0x${{act^^}}"
+    inactive_color="0x${{inact^^}}"
 )
 
 borders "${{options[@]}}"
-

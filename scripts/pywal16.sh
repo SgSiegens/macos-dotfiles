@@ -9,18 +9,17 @@ SB_WIDGET="$HOME/ubersicht/widgets/simple-bar"
 # Sync  internal pywal files
 ln -sf "$WAL_CACHE/flameshot.ini" "$DOTFILES/.config/flameshot/flameshot.ini"
 ln -sf "$WAL_CACHE/pywal_theme.js" "$SB_WIDGET/lib/styles/themes/pywal_theme.js"
+ln -sf "$WAL_CACHE/bordersrc" "$DOTFILES/.config/borders/bordersrc"
 
 # Simplebar needs some addtional handling
 if [ -f "$SB_WIDGET/lib/styles/pywal/pywal-gen.sh" ]; then
     bash "$SB_WIDGET/lib/styles/pywal/pywal-gen.sh"
 fi
 
-
-
 # Inject colors into .simplebarrc via jq
 if [ -f "$WAL_CACHE/mycolors.sh" ]; then
     # load generated color palette
-    source "$WAL_CACHE/colors.sh"
+    source "$WAL_CACHE/mycolors.sh"
 
     NEW_STYLES=":root {
       --main: $background;
@@ -65,6 +64,8 @@ if [ -f "$WAL_CACHE/mycolors.sh" ]; then
 fi
 
 osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'
+
+bash ~/.config/borders/bordersrc
 
 # Update  all Kitty Terminals
 for socket in /tmp/kitty*; do
