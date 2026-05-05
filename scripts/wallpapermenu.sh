@@ -14,8 +14,8 @@ menu () {
 		fi
 
 case $CHOICE in
-		Random) wal -i "$FOLDER" -o $SCRIPT ;; # dmenu random option
-		*.*) wal -i "$CHOICE" -o $SCRIPT ;;
+		Random) wal -i "$FOLDER" -o $SCRIPT --cols16;; # dmenu random option
+		*.*) wal -i "$CHOICE" -o $SCRIPT --cols16;;
 		*) exit 0 ;;
 esac
 }
@@ -26,7 +26,7 @@ esac
 
 case "$#" in
 		0) menu ;;
-		1) wal -i "$1" -o $SCRIPT ;;
-		2) wal -i "$1" --theme $2 -o $SCRIPT ;;
+		1) wal -i "$1" -o $SCRIPT --cols16;;
+		2) wal -i "$1" --theme $2 -o $SCRIPT --cols16;;
 		*) exit 0 ;;
 esac
