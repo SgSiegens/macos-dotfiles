@@ -1,0 +1,133 @@
+{{
+  "$schema": "https://raw.githubusercontent.com/Jean-Tinland/simple-bar/refs/heads/master/lib/schemas/config.json",
+  "global": {{
+    "theme": "dark",
+    "compactMode": true,
+    "floatingBar": true,
+    "noBarBg": true,
+    "noColorInData": true,
+    "bottomBar": false,
+    "sideDecoration": false,
+    "inlineSpacesOptions": true,
+    "disableAnimations": false,
+    "spacesBackgroundColorAsForeground": false,
+    "widgetsBackgroundColorAsForeground": true,
+    "widgetMaxWidth": "100px",
+    "slidingAnimationPace": 4,
+    "font": "JetBrains Mono, Monaco, Menlo, monospace",
+    "fontSize": "11px",
+    "yabaiPath": "/opt/homebrew/bin/yabai",
+    "aerospacePath": "/opt/homebrew/bin/aerospace",
+    "windowManager": "aerospace",
+    "shell": "sh",
+    "terminal": "/Applications/kitty.app",
+    "disableNotifications": false,
+    "enableMissives": false,
+    "enableServer": false,
+    "serverSocketPort": 7777,
+    "yabaiServerRefresh": false,
+    "aerospaceServerRefresh": false,
+    "flashspacePath": "$(which flashspace)",
+    "flashspaceServerRefresh": false
+  }},
+  "themes": {{
+    "lightTheme": "MacOSLight",
+    "darkTheme": "Dracula",
+    "colorMain": "{background}",
+    "colorMainAlt": "{color1}",
+    "colorMinor": "{color2}",
+    "colorAccent": "{color4}",
+    "colorRed": "{color1}",
+    "colorGreen": "{color2}",
+    "colorYellow": "{color3}",
+    "colorOrange": "{color11}",
+    "colorBlue": "{color4}",
+    "colorMagenta": "{color5}",
+    "colorCyan": "{color6}",
+    "colorBlack": "{color0}",
+    "colorWhite": "{color7}",
+    "colorForeground": "{foreground}",
+    "colorBackground": "{background}"
+  }},
+  "process": {{
+    "showOnDisplay": "",
+    "displayForFocusedSpace": false,
+    "displayOnlyCurrent": true,
+    "centered": false,
+    "showCurrentSpaceMode": false,
+    "hideWindowTitle": true,
+    "displayOnlyIcon": false,
+    "expandAllProcesses": false,
+    "displaySkhdMode": false,
+    "displayStackIndex": false,
+    "displayOnlyCurrentStack": false
+  }},
+  "spacesDisplay": {{
+    "showOnDisplay": "",
+    "exclusions": "",
+    "titleExclusions": "",
+    "spacesExclusions": "",
+    "exclusionsAsRegex": false,
+    "displayAllSpacesOnAllScreens": true,
+    "hideDuplicateAppsInSpaces": false,
+    "displayStickyWindowsSeparately": false,
+    "hideCreateSpaceButton": true,
+    "hideEmptySpaces": true,
+    "showOptionsOnHover": true,
+    "switchSpacesWithoutYabai": false,
+    "customAeroSpaceDisplayIndexes": {{}},
+    "showOnlyFlashspaceSpaceIndex": false,
+    "hideFlashspaceAppIcons": false
+  }},
+  "widgets": {{
+    "processWidget": true,
+    "githubWidget": false,
+    "weatherWidget": false,
+    "netstatsWidget": false,
+    "cpuWidget": true,
+    "gpuWidget": false,
+    "memoryWidget": true,
+    "batteryWidget": true,
+    "wifiWidget": true,
+    "vpnWidget": false,
+    "zoomWidget": false,
+    "soundWidget": true,
+    "micWidget": false,
+    "dateWidget": true,
+    "timeWidget": true,
+    "keyboardWidget": false,
+    "spotifyWidget": true,
+    "cryptoWidget": false,
+    "stockWidget": false,
+    "youtubeMusicWidget": false,
+    "musicWidget": true,
+    "mpdWidget": false,
+    "browserTrackWidget": false,
+    "notificationsWidget": false,
+    "nextMeetingWidget": false
+  }},
+  "githubWidgetOptions": {{
+    "refreshFrequency": 600000,
+    "ghBinaryPath": "/opt/homebrew/bin/gh"
+  }},
+  "batteryWidgetOptions": {{
+    "refreshFrequency": 10000,
+    "toggleCaffeinateOnClick": true
+  }},
+  "userWidgets": {{
+    "userWidgetsList": {{
+      "1": {{
+        "title": "brew",
+        "icon": "Anki",
+        "backgroundColor": "--cyan",
+        "output": "export PATH=\"/opt/homebrew/bin:$PATH\" && brew outdated | wc -l | tr -d ' '",
+        "refreshFrequency": 1800000,
+        "active": true,
+        "noIcon": false
+      }}
+    }}
+  }},
+  "customStyles": {{
+    "styles": ":root {{\n  --main: {background};\n  --main-alt: {color1};\n  --minor: {color1};\n  --accent: {color12};\n  --red: {color3};\n  --green: {color12};\n  --yellow: {cursor};\n  --orange: {color3};\n  --blue: {color4};\n  --magenta: {color5};\n  --cyan: {color6};\n  --black: {color0};\n  --white: {color15};\n  --foreground: {foreground};\n  --background: {background};\n  --font: \"JetBrains Mono\", Monaco, Menlo, monospace;\n  --bar-height: 34px;\n  --bar-radius: 6px;\n}}"
+  }}
+}}
