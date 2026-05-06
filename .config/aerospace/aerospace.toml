@@ -4,6 +4,15 @@
 # It's not necessary to copy all keys to your config.
 # If the key is missing in your config, "default-config.toml" will serve as a fallback
 
+config-version = 2
+
+# Keep these workspaces alive even when empty
+# the actual wanted behaviour would be that when you close 
+# all windows on a workspace it only also closes when one 
+# switches workspace.
+# see https://github.com/nikitabobko/AeroSpace/discussions/964
+#persistent-workspaces = ['1', '2', '3', '4', '5']
+
 # You can use it to add commands that run after login to macOS user session.
 # 'start-at-login' needs to be 'true' for 'after-login-command' to work
 # Available commands: https://nikitabobko.github.io/AeroSpace/commands
@@ -23,6 +32,7 @@ start-at-login = true
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
+
 
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
@@ -46,7 +56,10 @@ key-mapping.preset = 'qwerty'
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center', "exec-and-forget osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'"]
-on-focus-changed = "move-mouse window-lazy-center"
+
+on-focus-changed = [ "move-mouse window-lazy-center", "exec-and-forget osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'",
+]
+
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
