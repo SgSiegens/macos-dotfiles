@@ -5,12 +5,13 @@
 FOLDER=~/.config/wallpapers # wallpaper folder
 SCRIPT=~/scripts/pywal16.sh # script to run after wal for refreshing programs, etc.
 
-
 menu () {
-		if command -v nsxiv >/dev/null; then 
-				CHOICE=$(nsxiv -otb $FOLDER/*)
+        if command -v hellpaper >/dev/null; then
+            CHOICE=$(hellpaper "$FOLDER")
+		elif command -v nsxiv >/dev/null; then 
+            CHOICE=$(nsxiv -otb $FOLDER/*)
 		else 
-				CHOICE=$(echo -e "Random\n$(command ls -v $FOLDER)" | dmenu -c -l 15 -i -p "Wallpaper: ")
+			CHOICE=$(echo -e "Random\n$(command ls -v $FOLDER)" | dmenu -c -l 15 -i -p "Wallpaper: ")
 		fi
 
 case $CHOICE in
