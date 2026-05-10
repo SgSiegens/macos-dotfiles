@@ -10,6 +10,7 @@ SB_WIDGET="$HOME/ubersicht/widgets/simple-bar"
 ln -sf "$WAL_CACHE/flameshot.ini" "$DOTFILES/.config/flameshot/flameshot.ini"
 ln -sf "$WAL_CACHE/pywal_theme.js" "$SB_WIDGET/lib/styles/themes/pywal_theme.js"
 ln -sf "$WAL_CACHE/bordersrc" "$DOTFILES/.config/borders/bordersrc"
+ln -sf "$WAL_CACHE/btopwal.theme" "$HOME/.config/btop/themes/btopwal.theme"
 
 # Simplebar needs some addtional handling
 if [ -f "$SB_WIDGET/lib/styles/pywal/pywal-gen.sh" ]; then
