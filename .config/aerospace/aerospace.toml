@@ -100,84 +100,84 @@ outer.right =      12
 #                   keypadMinus, keypadMultiply, keypadPlus
 # - Arrows.         left, down, up, right
 
-# All possible modifiers: cmd, ctrl, ctrl, shift
+# All possible modifiers: cmd, cmd, cmd, shift
 
 # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
 
-# You can uncomment this line to open up terminal with ctrl + enter shortcut
+# You can uncomment this line to open up terminal with cmd + enter shortcut
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
-# ctrl-enter = 'exec-and-forget open -n /System/Applications/Utilities/Kitty.app'
+# cmd-enter = 'exec-and-forget open -n /System/Applications/Utilities/Kitty.app'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-ctrl-slash = 'layout tiles horizontal vertical'
-ctrl-comma = 'layout accordion horizontal vertical'
+cmd-slash = 'layout tiles horizontal vertical'
+cmd-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-ctrl-h = 'focus left'
-ctrl-j = 'focus down'
-ctrl-k = 'focus up'
-ctrl-l = 'focus right'
+cmd-h = 'focus left'
+cmd-j = 'focus down'
+cmd-k = 'focus up'
+cmd-l = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
-ctrl-shift-h = 'move left'
-ctrl-shift-j = 'move down'
-ctrl-shift-k = 'move up'
-ctrl-shift-l = 'move right'
+cmd-shift-h = 'move left'
+cmd-shift-j = 'move down'
+cmd-shift-k = 'move up'
+cmd-shift-l = 'move right'
 
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-ctrl-1 = 'workspace 1'
-ctrl-2 = 'workspace 2'
-ctrl-3 = 'workspace 3'
-ctrl-4 = 'workspace 4'
-ctrl-5 = 'workspace 5'
-ctrl-6 = 'workspace 6'
-ctrl-7 = 'workspace 7'
-ctrl-8 = 'workspace 8'
-ctrl-9 = 'workspace 9'
-ctrl-b = 'workspace B'
-ctrl-e = 'workspace E'
-ctrl-d = 'workspace D'
-ctrl-m = 'workspace M'
-ctrl-w = 'workspace W'
-ctrl-c = 'workspace C'
-ctrl-s = 'workspace S'
-ctrl-v = 'workspace V'
+cmd-1 = 'workspace 1'
+cmd-2 = 'workspace 2'
+cmd-3 = 'workspace 3'
+cmd-4 = 'workspace 4'
+cmd-5 = 'workspace 5'
+cmd-6 = 'workspace 6'
+cmd-7 = 'workspace 7'
+cmd-8 = 'workspace 8'
+cmd-9 = 'workspace 9'
+cmd-b = 'workspace B'
+cmd-e = 'workspace E'
+cmd-d = 'workspace D'
+cmd-m = 'workspace M'
+cmd-w = 'workspace W'
+cmd-c = 'workspace C'
+cmd-s = 'workspace S'
+cmd-v = 'workspace V'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-ctrl-shift-1 = 'move-node-to-workspace 1'
-ctrl-shift-2 = 'move-node-to-workspace 2'
-ctrl-shift-3 = 'move-node-to-workspace 3'
-ctrl-shift-4 = 'move-node-to-workspace 4'
-ctrl-shift-5 = 'move-node-to-workspace 5'
-ctrl-shift-6 = 'move-node-to-workspace 6'
-ctrl-shift-7 = 'move-node-to-workspace 7'
-ctrl-shift-8 = 'move-node-to-workspace 8'
-ctrl-shift-9 = 'move-node-to-workspace 9'
-ctrl-shift-b = 'move-node-to-workspace B'
-ctrl-shift-e = 'move-node-to-workspace E'
-ctrl-shift-d = 'move-node-to-workspace D'
-ctrl-shift-w = 'move-node-to-workspace W'
-ctrl-shift-m = 'move-node-to-workspace M'
-ctrl-shift-c = 'move-node-to-workspace C'
-ctrl-shift-s = 'move-node-to-workspace S'
-ctrl-shift-v = 'move-node-to-workspace V'
+cmd-shift-1 = 'move-node-to-workspace 1'
+cmd-shift-2 = 'move-node-to-workspace 2'
+cmd-shift-3 = 'move-node-to-workspace 3'
+cmd-shift-4 = 'move-node-to-workspace 4'
+cmd-shift-5 = 'move-node-to-workspace 5'
+cmd-shift-6 = 'move-node-to-workspace 6'
+cmd-shift-7 = 'move-node-to-workspace 7'
+cmd-shift-8 = 'move-node-to-workspace 8'
+cmd-shift-9 = 'move-node-to-workspace 9'
+cmd-shift-b = 'move-node-to-workspace B'
+cmd-shift-e = 'move-node-to-workspace E'
+cmd-shift-d = 'move-node-to-workspace D'
+cmd-shift-w = 'move-node-to-workspace W'
+cmd-shift-m = 'move-node-to-workspace M'
+cmd-shift-c = 'move-node-to-workspace C'
+cmd-shift-s = 'move-node-to-workspace S'
+cmd-shift-v = 'move-node-to-workspace V'
 
-ctrl-shift-f = 'fullscreen'
+cmd-shift-f = 'fullscreen'
 
-ctrl-shift-q = 'close --quit-if-last-window'
+cmd-shift-q = 'close --quit-if-last-window'
 
-ctrl-shift-space = 'layout floating tiling'
+cmd-shift-space = 'layout floating tiling'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
-ctrl-tab = 'workspace-back-and-forth'
+cmd-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-ctrl-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+cmd-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
-ctrl-shift-semicolon = 'mode service'
+cmd-shift-semicolon = 'mode service'
 
-ctrl-shift-r = 'mode resize'
+cmd-shift-r = 'mode resize'
 
 [mode.resize.binding]
 h = 'resize width -50'
@@ -203,10 +203,10 @@ r = ['flatten-workspace-tree', 'mode main'] # reset layout
 f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
-ctrl-shift-h = ['join-with left', 'mode main']
-ctrl-shift-j = ['join-with down', 'mode main']
-ctrl-shift-k = ['join-with up', 'mode main']
-ctrl-shift-l = ['join-with right', 'mode main']
+cmd-shift-h = ['join-with left', 'mode main']
+cmd-shift-j = ['join-with down', 'mode main']
+cmd-shift-k = ['join-with up', 'mode main']
+cmd-shift-l = ['join-with right', 'mode main']
 
 
 #[[on-window-detected]]

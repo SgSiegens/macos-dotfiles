@@ -1,20 +1,21 @@
 #!/usr/bin/env bash
 
-# Open Terminal (Ctrl + Return)
-ctrl - return : open -n /Applications/kitty.app
+# Open Terminal (Cmd + Return)
+cmd - return : open -n /Applications/kitty.app
 
-# Open Browser (Ctrl + b)
-ctrl - b : open -n /Applications/Firefox.app
+# Open Browser (Cmd + b)
+cmd - b : open -n /Applications/Firefox.app
 
-shift + ctrl -w : /bin/zsh -i -c /Users/thm/scripts/wallpapermenu.sh
+# launch wallpaper menu 
+shift + cmd -w : /bin/zsh -i -c /Users/thm/scripts/wallpapermenu.sh
+
+# launch flameshot
+shift + ctrl - 4 : /Applications/flameshot.app/Contents/MacOS/flameshot gui
+
+#shift + cmd - q : osascript -e "tell application \"Finder\" to set p to item 1 of (get file of (processes whose frontmost = true)) as text" -e "tell application p to quit"
 
 
-shift + cmd - 4 : /Applications/flameshot.app/Contents/MacOS/flameshot gui
-
-#shift + ctrl - q : osascript -e "tell application \"Finder\" to set p to item 1 of (get file of (processes whose frontmost = true)) as text" -e "tell application p to quit"
-
-
-shift + ctrl - r : \
+shift + cmd - r : \
     #aerospace --restart-service; \
     skhd --restart-service; \
     osascript -e 'display notification "aerospace & skhd reloaded" with title "System"'
