@@ -1,0 +1,22 @@
+alias \
+\
+c="clear" \
+v="nvim" \
+f="fff" \
+cat="bat" \
+l="gls -lh --color=auto --group-directories-first" \
+ls="gls -h --color=auto --group-directories-first" \
+la="gls -lah --color=auto --group-directories-first" \
+shell="exec $SHELL -l" \
+fk="sudo !!" \
+mv="mv -i" \
+rm="rm -Iv" \
+df="df -h" \
+du="du -h -d 1" \
+k="killall" \
+p="ps aux | grep $1" \
+man="batman" \
+lsbc="lsblk | bat -l conf -p" \
+freec="free -h | bat -l cpuinfo -p" \
+sensors="sensors | bat -l cpuinfo -p" \
+bathelp='bat --plain --language=help'

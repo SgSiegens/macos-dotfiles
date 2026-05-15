@@ -1,0 +1,4 @@
+# Pipe --help output through bat
+help() {
+    "$@" --help 2>&1 | bathelp
+}
