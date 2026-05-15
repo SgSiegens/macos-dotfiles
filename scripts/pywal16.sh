@@ -12,6 +12,8 @@ ln -sf "$WAL_CACHE/pywal_theme.js" "$SB_WIDGET/lib/styles/themes/pywal_theme.js"
 ln -sf "$WAL_CACHE/bordersrc" "$DOTFILES/.config/borders/bordersrc"
 ln -sf "$WAL_CACHE/btopwal.theme" "$HOME/.config/btop/themes/btopwal.theme"
 
+tmux source-file ~/.cache/wal/pywal.tmux
+
 # Simplebar needs some addtional handling
 if [ -f "$SB_WIDGET/lib/styles/pywal/pywal-gen.sh" ]; then
     bash "$SB_WIDGET/lib/styles/pywal/pywal-gen.sh"
