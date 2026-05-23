@@ -1,0 +1,101 @@
+#!/bin/bash
+
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEM_DIR="$CONFIG_DIR/items"
+
+# Source Colors
+if [ -f "$HOME/.cache/wal/sketchybar_colors.sh" ]; then
+    source "$HOME/.cache/wal/sketchybar_colors.sh"
+else
+    source "$CONFIG_DIR/colors.sh"
+fi
+
+# Source Layout Variables
+source "$CONFIG_DIR/variables.sh"
+
+##### Bar Appearance #####
+sketchybar --bar \
+    height=$BAR_HEIGHT                      \
+    y_offset=$BAR_Y_OFFSET                  \
+    blur_radius=$BAR_BLUR_RADIUS            \
+    position=$BAR_POSITION                  \
+    sticky=$BAR_STICKY                      \
+    padding_left=$BAR_PADDING_LEFT          \
+    padding_right=$BAR_PADDING_RIGHT        \
+    margin=$BAR_MARGIN                      \
+    corner_radius=$BAR_CORNER_RADIUS        \
+    border_width=$BAR_BORDER_WIDTH          \
+    color="$BAR_COLOR"                      \
+    border_color="$BAR_COLOR"
+
+##### Item Defaults #####
+sketchybar --default \
+    updates=$ITEM_UPDATES                                  \
+    icon.font="$ICON_FONT"                                 \
+    icon.color="$ITEM_COLOR"                                   \
+    icon.highlight_color="$ACCENT_COLOR"                   \
+    icon.padding_left=$ICON_PADDING_LEFT                   \
+    icon.padding_right=$ICON_PADDING_RIGHT                 \
+    icon.drawing=$ICON_DRAWING                             \
+    label.font="$LABEL_FONT"                               \
+    label.color="$TEXT_COLOR"                                  \
+    label.highlight_color="$ACCENT_COLOR"                  \
+    label.padding_left=$LABEL_PADDING_LEFT                 \
+    label.padding_right=$LABEL_PADDING_RIGHT               \
+    label.drawing=$LABEL_DRAWING                           \
+    background.border_color="$DEFAULT_BORDER_COLOR"        \
+    background.color="$BAR_COLOR"                          \
+    background.corner_radius=$ITEM_BG_CORNER_RADIUS        \
+    background.height=$ITEM_BG_HEIGHT                      \
+    padding_left=$ITEM_PADDING_LEFT                        \
+    padding_right=$ITEM_PADDING_RIGHT                      \
+    popup.background.color=$ITEM_BG_COLOR                  \
+    popup.background.corner_radius=$POPUP_BG_CORNER_RADIUS \
+    popup.background.border_width=$POPUP_BG_BORDER_WIDTH   \
+    popup.background.border_color=$ACCENT_COLOR            \
+    popup.y_offset=$POPUP_Y_OFFSET
+
+
+sketchybar --add event aerospace_workspace_change
+
+##### Items #####
+
+# Left
+
+# Hidden manager item: subscribes to workspace changes and dynamically
+# adds/removes/reorders/styles all space.* items. This is what makes the
+# bar react to workspaces that are created after startup.
+sketchybar --add item workspace_manager left \
+           --set workspace_manager \
+               drawing=off \
+               updates=on \
+               script="$CONFIG_DIR/plugins/workspace_manager.sh" \
+           --subscribe workspace_manager aerospace_workspace_change
+
+# Seed the bar with whatever workspaces already exist at startup.
+# workspace_manager will handle any that appear later.
+for WORKSPACE in $(aerospace list-workspaces --all); do
+    sketchybar --add item "space.$WORKSPACE" left \
+               --set "space.$WORKSPACE" \
+                   label="$WORKSPACE" \
+                   label.align=center \
+                   label.width=dynamic \
+                   background.drawing=off \
+                   click_script="aerospace workspace $WORKSPACE"
+    # No --subscribe here: workspace_manager handles all visual updates
+done
+
+# -- Center --
+source "$ITEM_DIR/calendar.sh"
+
+# -- Right --
+source "$ITEM_DIR/battery.sh"
+source "$ITEM_DIR/network.sh"
+source "$ITEM_DIR/memory.sh"
+source "$ITEM_DIR/cpu.sh"
+source "$ITEM_DIR/volume.sh"
+
+
+
+##### Finalize #####
+sketchybar --update

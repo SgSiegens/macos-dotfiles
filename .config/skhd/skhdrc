@@ -7,7 +7,7 @@ cmd - return : open -n /Applications/kitty.app
 cmd - b : open -n /Applications/Firefox.app
 
 # launch wallpaper menu 
-shift + cmd -w : /bin/zsh -i -c /Users/thm/scripts/wallpapermenu.sh
+shift + cmd -w : /opt/homebrew/bin/bash -l -c /Users/thm/scripts/wallpapermenu.sh
 
 # launch flameshot
 shift + ctrl - 4 : /Applications/flameshot.app/Contents/MacOS/flameshot gui

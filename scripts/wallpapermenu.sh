@@ -4,6 +4,7 @@
 
 FOLDER=~/.config/wallpapers # wallpaper folder
 SCRIPT=~/scripts/pywal16.sh # script to run after wal for refreshing programs, etc.
+COMMON_FLAGS=(-e --contrast 2)
 
 menu () {
         if command -v hellpaper >/dev/null; then
@@ -15,8 +16,8 @@ menu () {
 		fi
 
 case $CHOICE in
-		Random) wal -i "$FOLDER" -o $SCRIPT --cols16;; # dmenu random option
-		*.*) wal -i "$CHOICE" -o $SCRIPT --cols16;;
+		Random) wal "${COMMON_FLAGS[@]}" -i "$FOLDER" -o $SCRIPT;; # dmenu random option
+		*.*) wal "${COMMON_FLAGS[@]}" -i "$CHOICE" -o $SCRIPT;;
 		*) exit 0 ;;
 esac
 }
@@ -27,7 +28,7 @@ esac
 
 case "$#" in
 		0) menu ;;
-		1) wal -i "$1" -o $SCRIPT --cols16;;
-		2) wal -i "$1" --theme $2 -o $SCRIPT --cols16;;
+		1) wal "${COMMON_FLAGS[@]}" -i "$1" -o $SCRIPT;;
+		2) wal "${COMMON_FLAGS[@]}" -i "$1" --theme $2 -o $SCRIPT;;
 		*) exit 0 ;;
 esac
