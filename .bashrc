@@ -4,8 +4,10 @@
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+# colors for bash shell in mac https://superuser.com/questions/260535/bash-color-shell-on-mac
 export CLICOLOR=1
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
+
 
 export PATH="/opt/local/bin:/opt/local/sbin:${HOME}/.local/bin:${PATH}"
 export MANPATH="/opt/local/share/man:$MANPATH"

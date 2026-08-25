@@ -26,7 +26,7 @@ case "$SENDER" in
   x_pos=$( bc <<< "scale=0; (${arr[0]} - $width) / 2")
   y_pos=$( bc <<< "scale=0; (${arr[1]} - $height) / 2")
 
-  launchctl asuser "$(id -u)" /Applications/kitty.app/Contents/MacOS/kitty \
+  open -na /Applications/kitty.app --args \
     --title pop-up \
     --start-as=normal \
     --override remember_window_size=no \

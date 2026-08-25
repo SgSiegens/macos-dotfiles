@@ -1,0 +1,11 @@
+# .github/workflows/test-install.yml
+name: Test dotfiles install
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run install script
+        run: ./install.sh

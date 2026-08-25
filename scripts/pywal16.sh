@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
 # Adjust these to your actual paths
-DOTFILES="$HOME/dotfiles"
-SB_CONF="$HOME/.simplebarrc"
+# DOTFILES defaults to ~/dotfiles but can be overridden
+DOTFILES="${DOTFILES:-$HOME/dotfiles}"
 WAL_CACHE="$HOME/.cache/wal"
-SB_WIDGET="$HOME/ubersicht/widgets/simple-bar"
 
 # --- race condition guard ---
 PIDFILE="/tmp/pywal16.pid"
@@ -17,27 +16,15 @@ trap 'rm -f "$PIDFILE"' EXIT
 
 # Sync  internal pywal files
 ln -sf "$WAL_CACHE/flameshot.ini" "$DOTFILES/.config/flameshot/flameshot.ini"
-ln -sf "$WAL_CACHE/pywal_theme.js" "$SB_WIDGET/lib/styles/themes/pywal_theme.js"
 ln -sf "$WAL_CACHE/bordersrc" "$DOTFILES/.config/borders/bordersrc"
 ln -sf "$WAL_CACHE/btopwal.theme" "$HOME/.config/btop/themes/btopwal.theme"
 
-tmux source-file ~/.cache/wal/pywal.tmux
+tmux source-file ~/.cache/wal/pywal.tmux 2>/dev/null || true
 
 if pgrep -x "sketchybar" > /dev/null
 then
     sketchybar --reload
 fi
-
-# # Simplebar needs some addtional handling
-# if [ -f "$SB_WIDGET/lib/styles/pywal/pywal-gen.sh" ]; then
-#     bash "$SB_WIDGET/lib/styles/pywal/pywal-gen.sh"
-# fi
-# ln -sf "$WAL_CACHE/.simplebarrc" "$HOME/.simplebarrc"
-#
-# # update simplebarrc
-# # bash ~/scripts/update_simplebar.sh >> /tmp/pywal_update.log 2>&1
-#
-# osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'
 
 bash ~/.config/borders/bordersrc
 
