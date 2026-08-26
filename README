@@ -1,9 +1,0 @@
-for nxsiv install it through mac ports 
-+ brew install --cask xquartz
-+ https://superuser.com/questions/310197/how-do-i-fix-a-cannot-open-display-error-when-opening-an-x-program-after-sshi
-
-
-on mac os it does not read from the .bashrc file but from different sources mentioned here
-https://apple.stackexchange.com/questions/12993/why-doesnt-bashrc-run-automatically
-https://apple.stackexchange.com/questions/282185/how-do-i-get-different-colors-for-directories-etc-in-iterm2
-

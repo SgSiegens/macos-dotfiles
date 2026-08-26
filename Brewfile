@@ -67,6 +67,7 @@ brew "tmux"
 
 # https://apple.stackexchange.com/questions/69223/how-to-replace-mac-os-x-utilities-with-gnu-core-utilities 
 # replace mac os x utilities with gnu core utils
+# https://apple.stackexchange.com/questions/282185/how-do-i-get-different-colors-for-directories-etc-in-iterm2
 brew "coreutils"
 brew "findutils"
 brew "gnu-tar"
