@@ -1,6 +1,6 @@
 # .github/workflows/test-install.yml
 name: Test dotfiles install
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   test:
