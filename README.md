@@ -22,7 +22,7 @@ Personal macOS configuration focused on a minimal, keyboard-driven workflow.
 - **Terminal:** [Kitty](https://github.com/kovidgoyal/kitty)
 - **`cat` replacement:** [bat](https://github.com/sharkdp/bat)
 - **Command-line fuzzy finder:** [fzf](https://github.com/junegunn/fzf)
-- **Wallpaper picker:** [Hellpaper](https://github.com/SgSiegens/hellpaper)
+- **Wallpaper picker:** [Raypaper](https://github.com/SgSiegens/raypaper)
 - **Color palette generator:** [pywal16](https://github.com/eylles/pywal16)
 
 ## Scripts
@@ -61,7 +61,7 @@ then run
 
 
 ## Wallpaper Picker
-The default wallpaper picker is Hellpaper. If you do not want to use Hellpaper, you can use 
+The default wallpaper picker is Raypaper. If you do not want to use Raypaper, you can use 
 [nsxiv](https://github.com/nsxiv/nsxiv) instead. Install nsxiv through [MacPorts](https://ports.macports.org/port/nsxiv/details/) for which you also need [XQuartz](https://github.com/XQuartz/XQuartz)
 
 ```bash

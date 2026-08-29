@@ -7,8 +7,8 @@ SCRIPT=~/scripts/pywal16.sh # script to run after wal for refreshing programs, e
 COMMON_FLAGS=(-e --contrast 2)
 
 menu () {
-        if command -v hellpaper >/dev/null; then
-            CHOICE=$(hellpaper "$FOLDER")
+        if command -v raypaper >/dev/null; then
+            CHOICE=$(raypaper "$FOLDER")
 		elif command -v nsxiv >/dev/null; then 
             CHOICE=$(nsxiv -otb $FOLDER/*)
 		else 

@@ -31,7 +31,7 @@ CONFIG_LINKS=(aerospace bat borders btop flameshot kitty shell sketchybar skhd w
 # GitHub Actions (and most CI systems) auto-set CI=true. A CI runner has no
 # GUI session, so anything that needs to actually render (AeroSpace, borders,
 # sketchybar, skhd) can't be meaningfully started or verified there — only on
-# a real, logged-in Mac. Everything else (Brewfile, hellpaper, pywal, symlinks)
+# a real, logged-in Mac. Everything else (Brewfile, raypaper, pywal, symlinks)
 # still runs and gets checked in CI.
 IS_CI="${CI:-false}"
 
@@ -51,7 +51,7 @@ fi
 
 
 # ---------------------------------------------------------------------------
-# Xcode Command Line Tools (Homebrew needs these, and so does hellpaper's build)
+# Xcode Command Line Tools (Homebrew needs these, and so does raypaper's build)
 # ---------------------------------------------------------------------------
 log "Checking Xcode Command Line Tools"
 if ! xcode-select -p &>/dev/null; then
@@ -146,23 +146,23 @@ else
 fi
 
 # ---------------------------------------------------------------------------
-# hellpaper — built from source
+# raypaper — built from source
 # ---------------------------------------------------------------------------
-log "Building hellpaper"
-HELLPAPER_SRC="$HOME/.local/src/hellpaper"
-mkdir -p "$(dirname "$HELLPAPER_SRC")"
-if [[ -d "$HELLPAPER_SRC" ]]; then
-  git -C "$HELLPAPER_SRC" pull --quiet
+log "Building raypaper"
+RAYPAPER_SRC="$HOME/.local/src/raypaper"
+mkdir -p "$(dirname "$RAYPAPER_SRC")"
+if [[ -d "$RAYPAPER_SRC" ]]; then
+  git -C "$RAYPAPER_SRC" pull --quiet
 else
-  git clone --quiet https://github.com/SgSiegens/hellpaper.git "$HELLPAPER_SRC"
+  git clone --quiet https://github.com/SgSiegens/raypaper.git "$RAYPAPER_SRC"
 fi
-make -C "$HELLPAPER_SRC" >/dev/null
+make -C "$RAYPAPER_SRC" >/dev/null
 if [[ -w /usr/local/bin ]]; then
-  make -C "$HELLPAPER_SRC" install >/dev/null
+  make -C "$RAYPAPER_SRC" install >/dev/null
 else
-  sudo make -C "$HELLPAPER_SRC" install >/dev/null
+  sudo make -C "$RAYPAPER_SRC" install >/dev/null
 fi
-ok "hellpaper built and installed to /usr/local/bin"
+ok "raypaper built and installed to /usr/local/bin"
 
 # ---------------------------------------------------------------------------
 # Symlink dotfiles with GNU Stow
@@ -316,7 +316,7 @@ done
 check "brew is installed"       command -v brew
 check "stow is installed"       command -v stow
 check "pywal (wal) is installed" command -v wal
-check "hellpaper is installed"  command -v hellpaper
+check "raypaper is installed"  command -v raypaper
 
 # --- window manager + bar + hotkeys are actually alive — only meaningful
 # --- with a real GUI session, so skip in headless CI ---
