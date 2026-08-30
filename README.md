@@ -2,6 +2,10 @@
 
 Personal macOS configuration focused on a minimal, keyboard-driven workflow.
 
+
+https://github.com/user-attachments/assets/5d554196-9bfb-4276-8042-91167f905253
+
+
 ## Toc
 * [Components](#components)
 * [Scripts](#scripts)
